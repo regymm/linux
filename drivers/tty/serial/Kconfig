@@ -1098,6 +1098,10 @@ config SERIAL_GRLIB_GAISLER_APBUART_CONSOLE
 	help
 	Support for running a console on the GRLIB APBUART
 
+config SERIAL_QUASISOC_UART
+	tristate "regymm's QuasiSoC UART support"
+	select SERIAL_CORE
+
 config SERIAL_ALTERA_JTAGUART
 	tristate "Altera JTAG UART support"
 	select SERIAL_CORE
