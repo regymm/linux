@@ -368,7 +368,7 @@ static int __init mount_nodev_root(char *root_device_name)
 	return err;
 }
 
-#ifdef CONFIG_BLOCK
+#if defined(CONFIG_BLOCK) && !defined(CONFIG_INITRAMFS_SOURCE)
 static void __init mount_block_root(char *root_device_name)
 {
 	int err = create_dev("/dev/root", ROOT_DEV);
